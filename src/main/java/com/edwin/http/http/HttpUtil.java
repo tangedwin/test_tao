@@ -61,33 +61,6 @@ public class HttpUtil {
         return data; 
     } 
 	
-	public static void main(String[] args){
-//		String url = "http://localhost:8088/tps/webservice/tpsMobileRest/dealMobileMesssage";
-////		String content = "{\"type\": \"TPS_LOGIN_MOBILE\",\"requestEntity\": {\"deviceNumber\": \"88888888888888888888\",\"phoneNumber\": \"18765432101\",\"verifyCode\": \"qqqqqq\"}}";
-//		String content = "{\"type\": \"TPS_LOGIN_MOBILE\",\"requestEntity\": {\"deviceNumber\": \"88888888888888888888\",\"phoneNumber\": \"15666666666\",\"verifyCode\": \"qqqqqq\"}}";
-//		jsonPost(url, content);
-		
-		
-		String url = "http://192.168.68.89:8080/tps/login/index.action";
-		HttpGet httpGet = new HttpGet(url);
-		try {
-			httpGet.getParams().setParameter("loginName", "000000");
-			httpGet.getParams().setParameter("password", "qqqqqq");
-			HttpResponse httpResponse = new DefaultHttpClient().execute(httpGet);
-//			loginName
-//			password
-            HttpEntity httpEntity = httpResponse.getEntity();
-            String result = EntityUtils.toString(httpEntity);
-            System.out.println(httpResponse.getStatusLine().getStatusCode()+"----"+httpResponse.getStatusLine().toString());
-            System.out.println(result);
-		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 	
 	
 	
